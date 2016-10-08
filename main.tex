@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[10pt,letterpaper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
 \moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
@@ -19,25 +19,16 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.9]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{hyperref}
+\usepackage{filemod}
 
 % personal data
-\name{John}{Doe}
-\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-\phone[fixed]{+2~(345)~678~901}
-\phone[fax]{+3~(456)~789~012}
-\email{john@doe.org}                               % optional, remove / comment the line if not wanted
-\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
-\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
-\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\name{Cody Austun}{Coleman}
+\extrainfo{Last Updated: \filemodprintdate{\jobname}}
+\email{cody.coleman@cs.stanford.edu}
 
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
@@ -57,74 +48,108 @@
 \makecvtitle
 
 \section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
-
-\section{Master thesis}
-\cvitem{title}{\emph{Title}}
-\cvitem{supervisors}{Supervisors}
-\cvitem{description}{Short thesis abstract}
+\cventry{Present}{\normalfont{Doctor of Philosophy in Computer Science}}{Stanford University}{Stanford, CA}{}{}
+\cventry{Feburary 2015}{\normalfont{Master of Engineering in Electrical Engineering and Computer Science}}{Massachusetts Institute of Technology (MIT)}{Cambridge, MA}{5.0/5.0}{}
+\cvitem{Supervisors}{Isaac Chuang}
+\cventry{June 2013}{\normalfont{Bachelor of Science in Electrical Engineering and Computer Science}}{Massachusetts Institute of Technology (MIT)}{Cambridge, MA}{4.9/5.0}{One Year Bernard M. Gordon MIT Engineering Leadership Program}
+\cvitem{Study Abroad}{University of Cambridge, Gonville \& Caius College\hfill \textit{June 2012}}
 
 \section{Experience}
-\subsection{Vocational}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
+\cventry{June 2015--August 2016}{Junior Data Scientist}{Jump Trading, \normalfont{Vendor Data Group}}{Chicago, IL}{}{%
 \begin{itemize}%
-\item Achievement 1;
-\item Achievement 2, with sub-achievements:
-  \begin{itemize}%
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
-  \item Sub-achievement (c);
-  \end{itemize}
-\item Achievement 3.
+    \item Engineered systems to curate a centralized source of research and reference data for the firm, including Trading, Research, and Technology to Risk, Middle Office and Accounting teams
+    \item Constructed frameworks and pipelines to analyze data from a variety of vendors to automatically create and update security master, corporate actions, pricing and entity master data
+    \item Communicated internally and externally to understand needs, identify opportunities, diagnose problems, and maintain reliability
 \end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
-\subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+\cventry{March 2015--June 2015}{Educational Technology Consultant}{Davidson College, \normalfont{DavidsonX and DavidsonNext}}{Remote}{}{%
+\begin{itemize}%
+    \item Automated data processing for 5 DavidsonX Massive Open Online Courses (MOOCs) and 64 DavidsonNext blended AP instruction courses
+\end{itemize}}
+\cventry{Feburary 2013--Feburary 2015}{Research Assistant}{MIT, \normalfont{Office of Digital Learning and MITx}}{Cambridge, MA}{}{%
+\begin{itemize}%
+    \item Investigated the potential for educational platforms to adapt to different learning styles through machine learning techniques in order to improve learning outcomes
+    \item Developed a video response tool for the edX platform that enabled a new level of expressive power in open ended responses
+\end{itemize}}
+\cventry{January 2013--May 2014}{Founder's Journey (6.933) Teaching Assistant}{MIT, \normalfont{EECS Department}}{Cambridge, MA}{}{%
+\begin{itemize}%
+    \item Founded and directed an initiative to help students offset early expenses in evaluating their ideas by awarding monetary grants
+    \item Mentored students and provided feedback on their ideas in order to hone their entrepreneurial skills
+\end{itemize}}
+\cventry{June 2013--August 2013}{Technical Assistant}{MIT, \normalfont{Global Startup Labs formerly known as AITI}}{Bangalore, India}{}{%
+\begin{itemize}%
+    \item Taught 32 India university students Ruby on Rails and the fundamentals of web development
+    \item Guided 10 teams as they developed prototypes and pitched to local venture capitalists and accelerators
+\end{itemize}}
+\cventry{June 2012--August 2012}{YouTube Analytics Intern}{Google, \normalfont{Associate Product Manager (APM) Internship}}{Zurich, Switzerland}{}{%
+\begin{itemize}%
+    \item Redesigned existing features and developed new features for YouTube Analytics
+    \item Managed a team of 12 to launch estimated time watched and metric comparisons across the world
+    \item Collaborated with numerous teams in YouTube to deal with issues concerning publicity, privacy, accessibility and discovery
+\end{itemize}}
+\cventry{June 2011--August 2011}{Local Search Quality Intern}{Google, \normalfont{Building Opportunity in Leader Development (BOLD) Internship}}{Mountain View, CA}{}{%
+\begin{itemize}%
+    \item Programmed tools for large-scale data manipulation and analysis to expedite and improve spam detection in Google Places
+    \item Created and administered training documents, videos, exercises, and workshops globally for both R and Google BigQuery
+\end{itemize}}
+\cventry{June 2010--August 2010}{Web Developer \& Team Representative at el Tecnológico de Monterrey}{MISTI Mexico, \normalfont{Iniciativa OCW}}{Mexico City, Mexico}{}{%
+\begin{itemize}%
+    \item Engineered a website that mapped MIT online course material to three Mexican universities in order to improve accessibility for students and staff
+\end{itemize}}
 
-\section{Languages}
-\cvitemwithcomment{Language 1}{Skill level}{Comment}
-\cvitemwithcomment{Language 2}{Skill level}{Comment}
-\cvitemwithcomment{Language 3}{Skill level}{Comment}
 
-\section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
 
-\section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
+\section{Skills}
+\cvdoubleitem{Programming Languages}{Python, C, C++, SQL, Ruby, \LaTeX}{Web Development}{HTML, CSS, JavaScript, SCSS, CoffeeScript}
+\cvdoubleitem{Applications}{Vi/Vim, Git, tmux, MySQL}{Operating Systems}{Unix, Linux, Redhat, macOS, Windows}
 
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+\section{Leadership}
+\cventry{May 2012--May 2014}{President}{MIT, \normalfont{Eta Kapp Nu (HKN) Honor Society for EECS}}{Cambridge, MA}{}{%
+\begin{itemize}%
+    \item Managed MIT’s top academic EECS students to host several large events and services including tutoring and course reviews
+\end{itemize}}
+\cventry{August 2011--May 2014}{Member}{MIT, \normalfont{Member of Undergraduate Student Advisory Group in EECS (USAGE)}}{Cambridge, MA}{}{%
+\begin{itemize}%
+    \item Led efforts to design and build a new student lounge for EECS undergraduate and masters students
+    \item Worked with EECS students to represent student interests on issues including new degree requirements and research programs
+\end{itemize}}
+\cventry{July 2011}{MIT Student Ambassador}{Ameson Chinese Elite Program}{Beijing, China}{}{%
+\begin{itemize}%
+    \item Represented MIT in panel discussions about peacekeeping, terrorism, and new energy
+\end{itemize}}
+\cventry{January 2011}{Team Leader}{MIT, \normalfont{6.470 Web Programming Competition}}{Cambridge, MA}{}{%
+\begin{itemize}%
+    \item Built a resume editor and management system that won Utility, HTML5, and audience choice awards, totaling \$2000 in prizes
+\end{itemize}}
 
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+\section{Honors}
+\cvlistdoubleitem{NSF Graduate Research Fellow}{Stanford EDGE Doctoral Fellow}
+\cvlistdoubleitem{MIT EECS Paul Penfield Student Service Award}{Google Patent Award}
+\cvlistdoubleitem{Tau Beta Pi (TBP) National Engineering Honor Society}{IEEE Eta Kappa Nu (HKN) Honor Society}
+\cvlistdoubleitem{National Society Collegiate Scholar}{Google BOLD Immersion Scholar}
+\cvlistdoubleitem{MIT Club of Northern New Jersey Scholar}{Quest Scholar}
+
 
 \section{References}
 \begin{cvcolumns}
-  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+  \cvcolumn{Academia}{%
+  \begin{itemize}
+      \item Isaac Chuang - \href{mailto:ichuang@mit.edu}{ichuang@mit.edu}
+      \item Anantha Chandrakasan - \href{mailto:anantha@mtl.mit.edu}{anantha@mtl.mit.edu}
+      \item Angela Duckworth - \href{mailto:aduckworth@characterlab.org}{aduckworth@characterlab.org}
+  \end{itemize}}
+  \cvcolumn{Industry}{%
+  \begin{itemize}
+      \item Lindsay Tobolik - \href{mailto:ltobolik@jumptrading.com}{ltobolik@jumptrading.com}
+      \item James Buckney - \href{mailto:jbuckney@jumptrading.com}{jbuckney@jumptrading}
+      \item Vandana Bharvani - \href{mailto:vandanab@google.com}{vandanab@google.com}
+    \end{itemize}}
 \end{cvcolumns}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 \nocite{*}
-\bibliographystyle{plain}
+\bibliographystyle{acm}
 \bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
@@ -136,29 +161,6 @@ Detailed achievements:%
 %\bibliographystylemisc{plain}
 %\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
-\clearpage
-%-----       letter       ---------------------------------------------------------
-% recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
-Albert Einstein discovered that $e=mc^2$ in 1905.
-
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-
-\makeletterclosing
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
