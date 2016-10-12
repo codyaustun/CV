@@ -26,13 +26,15 @@
 \usepackage{filemod}
 \usepackage{xstring}
 
+\linespread{1.0}
+
 \def\FormatName#1{%
   \IfSubStr{#1}{Coleman}{\textbf{#1}}{#1}%
 }
 
 % personal data
 \name{Cody Austun}{Coleman}
-\address{353 Serra Mall}{Stanford, CA 94305}{}
+\address{Gates Computer Science Building}{353 Serra Mall}{Stanford, CA 94305}
 \phone[mobile]{+1~(617)~564~0648}
 \extrainfo{Last Updated: \filemodprintdate{\jobname}}
 \email{cody.coleman@cs.stanford.edu}
@@ -71,10 +73,12 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\vspace*{-10mm}
+
 \section{Education}
-\cventry{Present}{Doctor of Philosophy in Computer Science}{Stanford University}{Stanford, CA}{}{}
-\cventry{Feburary 2015}{Master of Engineering in Electrical Engineering and Computer Science}{Massachusetts Institute of Technology (MIT)}{Cambridge, MA}{5.0/5.0}{Supervisor: Isaac Chuang}
-\cventry{June 2013}{Bachelor of Science in Electrical Engineering and Computer Science}{Massachusetts Institute of Technology (MIT)}{Cambridge, MA}{4.9/5.0}{}
+\cventry{September 2016--Present}{Doctor of Philosophy in Computer Science}{Stanford University}{Stanford, CA}{}{}
+\cventry{September 2013--Feburary 2015}{Master of Engineering in Electrical Engineering and Computer Science}{Massachusetts Institute of Technology (MIT)}{Cambridge, MA}{5.0/5.0}{Supervisor: Isaac Chuang}
+\cventry{September 2009--June 2013}{Bachelor of Science in Electrical Engineering and Computer Science}{Massachusetts Institute of Technology (MIT)}{Cambridge, MA}{4.9/5.0}{}
 % \cventry{June 2012}{Cambridge-MIT Exchange (CME) in Electrical Engineering}{University of Cambridge}{Cambridge, UK}{}{}
 
 \section{Experience}
@@ -84,59 +88,55 @@
     \item Investigated teacher enrollment in HarvardX and MITx courses in order to redefine the target audience of MOOCs
     \item Distilled tracking log information from the edX platform into informative features about student behavior and performance
     \item Adapted Latent Dirichlet Allocation (LDA) from natural language processing to uncover behavioral patterns in Massive Open Online Courses (MOOCs) and accurately predict student drop out
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{November 2013--May 2014}{Research Assistant}{Harvard University, \normalfont{HarvardX}}{Cambridge, MA}{}{%
 \begin{itemize}%
     \item Explored the impact of spaced study sessions (inspired by spaced practice phenomenon)  in HarvardX courses
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 
 \subsection{Professional}
 \cventry{June 2015--August 2016}{Junior Data Scientist}{Jump Trading, \normalfont{Vendor Data Group}}{Chicago, IL}{}{%
 \begin{itemize}%
     \item Communicated internally and externally to understand needs, identify opportunities, diagnose problems, and maintain reliability
     \item Constructed frameworks and pipelines to analyze data from a variety of vendors to automatically create and update security master, corporate actions, pricing and entity master data
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{March 2015--June 2015}{Educational Technology Consultant}{Davidson College, \normalfont{DavidsonX and DavidsonNext}}{Davidson, NC}{}{%
 \begin{itemize}%
     \item Automated data processing for 5 DavidsonX Massive Open Online Courses (MOOCs) and 64 DavidsonNext blended AP courses
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{June 2012--August 2012}{YouTube Analytics Intern}{Google, \normalfont{Associate Product Manager (APM) Internship}}{Zurich, Switzerland}{}{%
 \begin{itemize}%
     \item Managed a team of 12 to launch estimated time watched and metric comparisons across the world
     \item Designed initial draft of playlist analytics for YouTube's curators
     \item Collaborated with numerous teams in YouTube to deal with issues concerning publicity, privacy, accessibility and discovery
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{June 2011--August 2011}{Local Search Quality Intern}{Google, \normalfont{Building Opportunity in Leader Development (BOLD) Internship}}{Mountain View, CA}{}{%
 \begin{itemize}%
     \item Programmed tools for large-scale data manipulation and analysis to expedite and improve spam detection in Google Places
     \item Created and administered training documents, videos, exercises, and workshops globally for both R and Google BigQuery
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{June 2010--August 2010}{Web Developer \& Team Representative at el Tecnol\'{o}gico de Monterrey}{MISTI Mexico, \normalfont{Iniciativa OCW}}{Mexico City, Mexico}{}{%
 \begin{itemize}%
     \item Provided extra resourses for students at Mexican universities by building a website to map MIT's online material to their courses
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 
 \subsection{Teaching}
 \cventry{January 2013--May 2014}{6.933 Founder's Journey Teaching Assistant}{MIT, \normalfont{EECS Department}}{Cambridge, MA}{}{%
 \begin{itemize}%
     \item Founded and directed an initiative to help students offset early expenses in evaluating their ideas by awarding monetary grants
     \item Mentored students and provided feedback on their ideas in order to hone their entrepreneurial skills
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{June 2013--August 2013}{Technical Assistant}{MIT, \normalfont{Global Startup Labs formerly known as AITI}}{Bangalore, India}{}{%
 \begin{itemize}%
     \item Taught 32 India university students Ruby on Rails and the fundamentals of web development
     \item Guided 10 teams as they developed prototypes and pitched to local venture capitalists and accelerators
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{September 2010--December 2010}{8.01 Classical Mechanics Teaching Assistant}{MIT, \normalfont{Physics Department \& Experimental Study Group (ESG)}}{Cambridge, MA}{}{%
 \begin{itemize}%
     \item Assisted students during class and office hours by working through problems and answering questions
     \item Taught math review sessions that went over many difficult math concepts in physics to help students who were struggling
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 
-
-\section{Skills}
-\cvdoubleitem{Programming Languages}{Python, C, C++, SQL, \LaTeX}{Web}{HTML, CSS, JavaScript, SCSS, CoffeeScript}
-\cvdoubleitem{Applications}{Vi/Vim, Git, tmux, MySQL}{Operating Systems}{Linux, Redhat, macOS, Windows}
 
 \section{Leadership}
 
@@ -148,20 +148,20 @@
 \cventry{May 2012--May 2014}{President}{MIT, \normalfont{Eta Kapp Nu (HKN) Honor Society for EECS}}{Cambridge, MA}{}{%
 \begin{itemize}%
     \item Managed MIT's top academic EECS students to host several large events and services including tutoring and course reviews
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{August 2011--May 2014}{Member \& Student Lounge Committee Leader}{MIT, \normalfont{Undergraduate Student Advisory Group in EECS (USAGE)}}{Cambridge, MA}{}{%
 \begin{itemize}%
     \item Led efforts to design and build a new student lounge for EECS undergraduate and masters students
     \item Worked with EECS students to represent student interests on issues including new degree requirements and research programs
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{July 2011}{MIT Student Ambassador}{Ameson Chinese Elite Program}{Beijing, China}{}{%
 \begin{itemize}%
     \item Represented MIT in panel discussions about peacekeeping, terrorism, and new energy
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 \cventry{January 2011}{Team Leader}{MIT, \normalfont{6.470 Web Programming Competition}}{Cambridge, MA}{}{%
 \begin{itemize}%
     \item Built a resume editor and management system that won Utility, HTML5, and audience choice awards, totaling \$2000 in prizes
-\end{itemize}}
+\end{itemize}}\vspace*{1mm}
 
 \section{Honors}
 \subsection{Fellowships \& Scholarships}
