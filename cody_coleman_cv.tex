@@ -26,6 +26,25 @@
 \usepackage{filemod}
 \usepackage{xstring}
 
+% Begin fix from https://tex.stackexchange.com/questions/85965/sorted-list-of-publications-in-moderncv-from-bibtex/85981#85981
+\usepackage[style=numeric-comp,sorting=ydnt,dashed=false,maxbibnames=99]{biblatex}
+\addbibresource{publications.bib}
+% end fix
+
+% Begin fix from
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+% Add "Author+an={1=highlight}," to entries in bib file
+% end
+
 \linespread{1.0}
 
 \def\FormatName#1{%
@@ -85,7 +104,7 @@
 \subsection{Research}
 \cventry{June 2017--Present}{Researcher}{Stanford, \normalfont{\href{https://dawn.cs.stanford.edu}{DAWN Project}}}{Stanford, CA}{}{%
 \begin{itemize}%
-    \item Founded \href{https://mlperf.org/}{MLPerf} with researchers and engineers from Google, Harvard, and Baidu and gained the support of over 30 organizations
+    \item Founded \href{https://mlperf.org/}{MLPerf} with researchers and engineers from Google, Harvard, and Baidu and gained the support of over 50 organizations
     \item Led \href{https://dawn.cs.stanford.edu/benchmark}{DAWNBench}, an end-to-end deep learning benchmark and competition, to an over a $1000\times$ improvement in ImageNet training time with outside submissions from teams including Google, fast.ai, Intel, and Alibaba
 \end{itemize}}\vspace*{1mm}
 \cventry{Feburary 2013--Feburary 2015}{Research Assistant}{MIT, \normalfont{Office of Digital Learning and MITx}}{Cambridge, MA}{}{%
@@ -193,25 +212,6 @@
 % \cvlistitem{National Society Collegiate Scholars (NSCS)\hfill 2010}
 
 
-% \section{References}
-% \cvdoublecolumn{\cvreference{Isaac Chuang}
-%     {Professor of Electrical Engineering and Computer Science\newline Professor of Physics\newline Senior Associate Dean of Digital Learning}
-%     {Massachusetts Institute of Technology}
-%     {}
-%     {Cambridge, MA 02139}
-%     {\href{mailto:ichuang@mit.edu}{ichuang@mit.edu}}
-%     {617-253-1692}\\[1em]
-%     }
-%     {\cvreference{Angela Duckworth}
-%     {Professor of Psychology\newline Founder and Scientific Director of the Character Lab\newline Faculty Co-Director of Wharton People Analytics}
-%     {University of Pennsylvania}
-%     {}
-%     {Philadelphia, PA 19104}
-%     {\href{mailto:aduckworth@characterlab.org}{aduckworth@characterlab.org}}
-%     {215-898-1339}\\[1em]
-%     }
-
-
 % \section{Conference Activity/Participation}
 % \cvlistitem{MIT Learning International Networks Consortium (LINC)\hfill 2016}
 % \cvlistitem{Harvard-MIT Online Learning Summit\hfill 2015}
@@ -225,8 +225,7 @@
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 \nocite{*}
-\bibliographystyle{cv}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+\printbibliography[title={Publications}]
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
