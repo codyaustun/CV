@@ -27,7 +27,8 @@
 \usepackage{xstring}
 
 % Begin fix from https://tex.stackexchange.com/questions/85965/sorted-list-of-publications-in-moderncv-from-bibtex/85981#85981
-\usepackage[style=numeric-comp,sorting=ydnt,dashed=false,maxbibnames=99]{biblatex}
+\usepackage[style=authortitle,sorting=ydnt,dashed=false,maxbibnames=99]{biblatex}
+\setlength\bibitemsep{1.5\itemsep}
 \addbibresource{publications.bib}
 % end fix
 
@@ -102,18 +103,18 @@
 
 \section{Experience}
 \subsection{Research}
-\cventry{June 2017--Present}{Researcher}{Stanford, \normalfont{\href{https://dawn.cs.stanford.edu}{DAWN Project}}}{Stanford, CA}{}{%
+\cventry{June 2017--Present}{PhD Student Researcher}{Stanford, \normalfont{\href{https://dawn.cs.stanford.edu}{DAWN Project}}}{Stanford, CA}{}{%
 \begin{itemize}%
     \item Founded \href{https://mlperf.org/}{MLPerf} with researchers and engineers from Google, Harvard, and Baidu and gained the support of over 50 organizations
     \item Led \href{https://dawn.cs.stanford.edu/benchmark}{DAWNBench}, an end-to-end deep learning benchmark and competition, to an over a $1000\times$ improvement in ImageNet training time with outside submissions from teams including Google, fast.ai, Intel, and Alibaba
 \end{itemize}}\vspace*{1mm}
-\cventry{Feburary 2013--Feburary 2015}{Research Assistant}{MIT, \normalfont{Office of Digital Learning and MITx}}{Cambridge, MA}{}{%
+\cventry{Feburary 2013--Feburary 2015}{Master's Student Researcher}{MIT, \normalfont{Office of Digital Learning and MITx}}{Cambridge, MA}{}{%
 \begin{itemize}%
     \item Investigated teacher enrollment in HarvardX and MITx courses in order to redefine the target audience of MOOCs
     \item Distilled tracking log information from the edX platform into informative features about student behavior and performance
     \item Adapted Latent Dirichlet Allocation (LDA) from natural language processing to uncover behavioral patterns in Massive Open Online Courses (MOOCs) and accurately predict student drop out
 \end{itemize}}\vspace*{1mm}
-\cventry{November 2013--May 2014}{Research Assistant}{Harvard University, \normalfont{HarvardX}}{Cambridge, MA}{}{%
+\cventry{November 2013--May 2014}{Master's Student Researcher}{Harvard University, \normalfont{HarvardX}}{Cambridge, MA}{}{%
 \begin{itemize}%
     \item Explored the impact of spaced study sessions (inspired by spaced practice phenomenon)  in HarvardX courses
 \end{itemize}}\vspace*{1mm}
@@ -164,27 +165,14 @@
 
 \section{Leadership}
 
-% \cventry{September 2012--June 2013}{GEL Year One (GEL1)}{MIT, \normalfont{Bernard M. Gordon MIT Engineering Leadership Program (GELP)}}{Cambridge, MA}{}{%
-% \begin{itemize}
-%     \item Completed the GELP year one curriculum and group activities on the fundamentals of engineering leadership theory
-% \end{itemize}
-% }
+\cventry{March 2019--Present}{Research Working Group Co-Chair}{MLPerf}{Stanford, CA}{}{%
+\begin{itemize}%
+    \item Led cross-organizational team with over 40 members to successful tutorials at ASPLOS'19 and ISCA'19, birds of feather sessions at SC'19, and a talk at Hot Chips 2019
+\end{itemize}}\vspace*{1mm}
+
 \cventry{May 2012--May 2014}{President}{MIT, \normalfont{Eta Kapp Nu (HKN) Honor Society for EECS}}{Cambridge, MA}{}{%
 \begin{itemize}%
     \item Managed MIT's top academic EECS students to host several large events and services including tutoring and course reviews
-\end{itemize}}\vspace*{1mm}
-\cventry{August 2011--May 2014}{Member \& Student Lounge Committee Leader}{MIT, \normalfont{Undergraduate Student Advisory Group in EECS (USAGE)}}{Cambridge, MA}{}{%
-\begin{itemize}%
-    \item Led efforts to design and build a new student lounge for EECS undergraduate and masters students
-    \item Worked with EECS students to represent student interests on issues including new degree requirements and research programs
-\end{itemize}}\vspace*{1mm}
-\cventry{July 2011}{MIT Student Ambassador}{Ameson Chinese Elite Program}{Beijing, China}{}{%
-\begin{itemize}%
-    \item Represented MIT in panel discussions about peacekeeping, terrorism, and new energy
-\end{itemize}}\vspace*{1mm}
-\cventry{January 2011}{Team Leader}{MIT, \normalfont{6.470 Web Programming Competition}}{Cambridge, MA}{}{%
-\begin{itemize}%
-    \item Built a resume editor and management system that won Utility, HTML5, and audience choice awards, totaling \$2000 in prizes
 \end{itemize}}\vspace*{1mm}
 
 \section{Honors}
@@ -192,7 +180,7 @@
 \cvlistitem{Accel Innovation Scholar\hfill 2018}
 \cvlistitem{NSF Graduate Research Fellow\hfill 2015}
 \cvlistitem{Stanford Enhancing Diversity in Graduate Education (EDGE) Doctoral Fellow\hfill 2015}
-\cvlistitem{ACM Richard Tapia Scholar\hfill 2015}
+% \cvlistitem{ACM Richard Tapia Scholar\hfill 2015}
 \cvlistitem{MITx Fellow\hfill 2013}
 \cvlistitem{Google Build Opportunities for Leadership \& Development (BOLD) Immersion Scholar\hfill 2011}
 \cvlistitem{Quest Scholar\hfill 2010}
@@ -201,6 +189,7 @@
 \subsection{Awards}
 \cvlistitem{Facebook Hardware \& Software Systems Research Award\hfill 2018}
 \cvlistitem{Stanford School of Engineering Diversity Recruitment Award\hfill 2016}
+\cvlistitem{Second Place Graduate Poster Award at ACM Richard Tapia Celebration of Diversity in Computing Conferece\hfill 2015}
 \cvlistitem{MIT Industrial Advisory Council for the Office of Minority Education (IACME) Student Prize\hfill 2015}
 \cvlistitem{MIT EECS Paul Penfield Student Service Award\hfill 2014}
 \cvlistitem{Google Patent Award\hfill 2012}
@@ -221,20 +210,12 @@
 % \cvlistitem{MIT Learning International Networks Consortium (LINC)\hfill 2013}
 
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 \nocite{*}
-\printbibliography[title={Publications}]
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+\printbibliography[nottype={misc}, title={Publications}]
+% \printbibliography[type={misc}, title={Presentations}]
+% \section{Presentations}
+% \printbibliography[type={misc}, title={Academic}, heading=subbibliography]
+% \printbibliography[type={misc}, title={Inspirational}, heading=subbibliography]
 
 \end{document}
 
